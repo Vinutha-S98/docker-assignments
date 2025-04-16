@@ -35,7 +35,7 @@ docker run -d -p 80:80 --name my-nginx nginx:alpine
 ```
 
 ### ✅ 5. Accessed Nginx in Browser
-Opened: http://51.21.243.46  
+Opened: "http://51.21.243.46"  
 ✅ Saw the default Nginx welcome page.
 
 ### ✅ 6. Modified the HTML Page
