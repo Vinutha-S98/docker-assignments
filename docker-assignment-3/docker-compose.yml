@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+    volumes:
+      - shared-html:/usr/share/nginx/html
+    networks:
+      - shared-net
+    command: ["nginx", "-g", "daemon off;"]
+
+  writer:
+    image: busybox
+    volumes:
+      - shared-html:/usr/share/nginx/html
+    networks:
+      - shared-net
+    command: >
+      sh -c 'while true; do
+        echo "<html><head><meta http-equiv=\"refresh\" content=\"5\"></head><body><h1>Current Time:</h1><p>$(date)</p></body></html>" > /usr/share/nginx/html/index.html;
+        sleep 5;
+      done'
+
+volumes:
+  shared-html:
+
+networks:
+  shared-net:
+
