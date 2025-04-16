@@ -56,6 +56,18 @@ docker compose up -d
 
 ---
 
+## 🖥️ Expected Output
+
+```json
+{
+  "message": "Visit count: 3"
+}
+```
+
+Each refresh will increment the counter. The value persists even after restarting the containers.
+
+---
+
 ## 🧠 Summary
 
 - Demonstrated a multi-container setup with persistent MySQL storage.
