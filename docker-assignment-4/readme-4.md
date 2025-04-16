@@ -18,7 +18,7 @@ This assignment demonstrates how to run a FastAPI application with a MySQL datab
 - **Python App**:
   - Built from a custom `Dockerfile` using `python:3.9-slim`
   - Uses environment variables: `DB_HOST`, `DB_USER`, `DB_PASSWORD`, `DB_NAME`
-  - Starts with: `uvicorn app:app --host 0.0.0.0 --port 8080`
+  - Starts with: `uvicorn app:app --host 0.0.0.0 --port 8081`
 
 - **MySQL**:
   - Image: `mysql`
@@ -41,9 +41,9 @@ docker compose up -d
 
 3. Visit in browser:
 ```
-http://<EC2-PUBLIC-IP>:8080
+http://<EC2-PUBLIC-IP>:8081
 ```
-
+#I have put my Ec2 ip- http://51.21.243.46:8081
 You’ll see a JSON message showing the visit count.
 
 4. Stop and restart:
